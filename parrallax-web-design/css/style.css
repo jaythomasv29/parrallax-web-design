@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');/*Google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');/*Google fonts*/
+
+html, body { /* Reset Style */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+  z-index: 102;
+  position: fixed;
+  width: 100%;
+  border-top: 4px solid #0C5DA5;
+  background-color: #fff;
+  padding: 12px 0;
+}
+header .header-inner {
+  width: 1120px;
+  margin: 0 auto;
+}
+header .header-inner a.brand {
+  display: inline-block;
+}
+header .header-inner a.brand img {
+  display: block;
+  border-radius: 30px;
+}
+header .header-inner .navigation {
+  float: right;
+  line-height: 30px;
+}
+header .header-inner .navigation a.nav-scroll {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 100;
+  font-size: 11px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #043A6B;
+}
+header .header-inner .navigation a.nav-scroll::after, header .header-inner .navigation a.nav-scroll::before {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+  -webkit-transition: all .3s ease;
+}
+header .header-inner .navigation a.nav-scroll::before {
+  margin-left: 10px;
+  color: #408DD2;
+  content: '|';
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+}
+header .header-inner .navigation a.nav-scroll::after {
+  margin-right: 10px;
+  color: #408DD2;
+  content: '|';
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+header .header-inner .navigation a.nav-scroll:hover, header .header-inner .navigation a.nav-scroll.active {
+  color: #408DD2;
+}
+header .header-inner .navigation a.nav-scroll:hover::after, header .header-inner .navigation a.nav-scroll:hover::before, header .header-inner .navigation a.nav-scroll.active::after, header .header-inner .navigation a.nav-scroll.active::before {
+  isplay: inline-block;
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+
+.intro {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    /*Background image from pexels.com*/
+    background: url(https://static.pexels.com/photos/196667/pexels-photo-196667.jpeg);
+    /* removes extra space at top */
+    display: table;
+    top 0;
+    background-size: cover;
+}
+.intro .inner {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    max-width: none;
+    
+}
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 10%;
+    border: solid 2px rgba(96, 157, 205, 0.5);
+    border-radius: 9px;
+    opacity: 10%;
+}
+
+.content h1 {
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 600%;
+    font-weight: 100;
+    color: #000000;
+    line-height: 100%;
+    
+}
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 135%;
+    font-weight: 400;
+    color: rgba(0,0,0,.5);
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid rgba(128,128,128,.85);
+    padding: 10px 20px;
+    border-radius: 9px;
+}
+.btn:hover {
+    color: #FFFFFF;
+    border: solid #609dcd 2px;
+    /*--Button Delay -- */
+    transition: all 0.7sl
+}
+/*--- Media Queries --*/
+@media screen and (max-width: 900px) {
+    .content{
+        padding-bottom: 10%;
+    }
+    .content h1{
+        font-size: 400%
+    }
+    .btn {
+        font-size: 110%;
+        padding: 9px 17px;
+    }
+}
+@media screen and (max-width: 768px) {
+.content{
+        padding-bottom: 10%;
+    }
+    .content h1{
+        font-size: 350%
+    }
+    .btn {
+        font-size: 100%;
+        padding: 9px 17px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+	.content{
+        padding-bottom: 10%;
+    }
+    .content h1{
+        font-size: 230%
+    }
+    .btn {
+        font-size: 110%;
+        padding: 6px 14px;
+    }
+}
